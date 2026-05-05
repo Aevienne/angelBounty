@@ -1,0 +1,40 @@
+wanted:
+  kills-per-star: 2
+  max-stars: 6
+  decay:
+    enabled: true
+    interval-seconds: 300
+    stars-per-interval: 1
+  lose-all-on-death: true
+  reset-kills-on-death: true
+  reward-base: 100.0
+  reward-per-star: 75.0
+  worlds-enabled: []
+  use-all-worlds-when-empty: true
+  save-interval-seconds: 60
+
+display:
+  scoreboard-sidebar: true
+  tab-prefix: true
+  nametag-prefix: true
+  below-name: false
+  stars-symbol-filled: '★'
+  stars-symbol-empty: '☆'
+  primary-color: '&c'
+  secondary-color: '&7'
+  label-color: '&6'
+  bounty-color: '&a'
+  safe-sidebar-title: '&6Wanted Status'
+
+economy:
+  enabled: false
+  vault-required: false
+  fallback-message-reward: true
+
+messages:
+  wanted-increase: '&cYou are now wanted: {stars} star(s).'
+  wanted-cleared: '&aYour wanted level has been cleared.'
+  bounty-claim: '&6{killer} claimed a bounty of &a${reward}&6 for taking down {victim}&6.'
+  target-status: '&6{player} &7- Wanted: {stars} star(s), Bounty: &a${reward}'
+  no-economy: '&eVault economy not found. Reward noted but not paid.'
+  top-header: '&6Top Wanted Players:'

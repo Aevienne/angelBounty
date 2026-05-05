@@ -1,0 +1,18 @@
+name: AngelBounty
+version: '1.1.0'
+main: me.angelique.angelBounty.AngelBounty
+api-version: '1.21'
+authors: [VincentPadua]
+description: Production-safe wanted and bounty system for Paper.
+softdepend: [Vault]
+commands:
+  wanted:
+    description: Shows wanted status and admin controls.
+    usage: /wanted [player|top|set|add|clear|reload]
+permissions:
+  angelbounty.admin:
+    default: op
+  angelbounty.bypass:
+    default: false
+  angelbounty.view.others:
+    default: true
