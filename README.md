@@ -52,7 +52,7 @@ Every player kill can increase the killer's wanted level:
 - Only players who are actually wanted have their stars cleared on death
 - Wanted level can decay over time if enabled in the config
 
-This means repeated player killers become visible targets, while bounty hunters are rewarded for taking them down.[1][2]
+This means repeated player killers become visible targets, while bounty hunters are rewarded for taking them down.
 
 ***
 
@@ -100,7 +100,7 @@ economy:
   fallback-message-reward: true
 ```
 
-Paper plugins can declare optional integrations through `softdepend`, which is how Vault support is typically handled in `plugin.yml`.[3][4][5]
+Paper plugins can declare optional integrations through `softdepend`, which is how Vault support is typically handled in `plugin.yml`.
 
 ***
 
@@ -128,6 +128,6 @@ Output jar will be in `build/libs/`.
 
 ## Dependencies
 
-- [Paper API 1.21.11](https://docs.papermc.io) — provided at runtime by the server[3]
-- [Vault API](https://dev.bukkit.org/projects/vault) — optional, used for bounty payouts when economy support is enabled[5]
-- Paper scoreboard APIs are used for sidebar, nametag, and player list displays.[1][2]
+- [Paper API 1.21.11](https://docs.papermc.io) — provided at runtime by the server.
+- [Vault API](https://dev.bukkit.org/projects/vault) — optional, used for bounty payouts when economy support is enabled.
+- Paper scoreboard APIs are used for sidebar, nametag, and player list displays.
