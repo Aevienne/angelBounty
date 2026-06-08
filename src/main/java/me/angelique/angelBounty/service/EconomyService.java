@@ -43,6 +43,21 @@ public final class EconomyService {
     }
 
     public boolean payout(OfflinePlayer player, double amount) {
+        return deposit(player, amount);
+    }
+
+    public boolean has(OfflinePlayer player, double amount) {
+        if (player == null || economy == null) return false;
+        return economy.has(player, amount);
+    }
+
+    public boolean withdraw(OfflinePlayer player, double amount) {
+        if (player == null || economy == null) return false;
+        EconomyResponse response = economy.withdrawPlayer(player, amount);
+        return response != null && response.transactionSuccess();
+    }
+
+    private boolean deposit(OfflinePlayer player, double amount) {
         if (player == null || amount <= 0.0D || economy == null) {
             return false;
         }
