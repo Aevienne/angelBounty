@@ -4,7 +4,7 @@ main: me.angelique.angelBounty.AngelBounty
 api-version: '1.21'
 authors: [VincentPadua]
 description: Production-safe wanted and bounty system for Paper.
-softdepend: [Vault]
+softdepend: [Vault, AngelNCore]
 commands:
   wanted:
     description: Shows wanted status and admin controls.

@@ -4,6 +4,8 @@ import me.angelique.angelBounty.AngelBounty;
 import me.angelique.angelBounty.config.PluginConfig;
 import me.angelique.angelBounty.model.WantedData;
 import me.angelique.angelBounty.storage.WantedStorage;
+import me.angelique.angelNCore.events.BountyCompletedEvent;
+import me.angelique.angelNCore.events.EventBus;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
@@ -118,6 +120,8 @@ public final class WantedService {
             if (!paid && config.isFallbackMessageReward()) {
                 killer.sendMessage(config.getMessageNoEconomy());
             }
+            String bountyId = killer.getUniqueId() + ":" + victim.getUniqueId();
+            EventBus.publish(new BountyCompletedEvent(bountyId, killer.getName(), victim.getName(), reward));
         }
 
         if (config.isLoseAllOnDeath()) {
