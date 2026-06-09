@@ -20,6 +20,7 @@ public final class BountyBoardGui {
 
     public static final String TITLE = TextUtil.color("&4Wanted & Contracts");
     static final int SIZE = 54;
+    static final Map<UUID, List<ContractData>> contractCache = new HashMap<>();
 
     private BountyBoardGui() {}
 
@@ -62,6 +63,7 @@ public final class BountyBoardGui {
         inv.setItem(28, item(Material.BOOK, "&6Open Contracts",
                 "&7Available mercenary work"));
         List<ContractData> openContracts = cs.getOpenContracts();
+        contractCache.put(player.getUniqueId(), openContracts);
         slot = 29;
         for (ContractData c : openContracts) {
             if (slot > 34) break;
