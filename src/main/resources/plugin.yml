@@ -9,6 +9,9 @@ commands:
   wanted:
     description: Shows wanted status and admin controls.
     usage: /wanted [player|top|set|add|clear|reload]
+  contract:
+    description: Mercenary contract board
+    usage: /contract <list|post|accept|complete> [args]
 permissions:
   angelbounty.admin:
     default: op
