@@ -18,7 +18,7 @@ import java.util.*;
 
 public final class BountyBoardGui {
 
-    public static final String TITLE = TextUtil.color("&8Bounty Board &7\u2014 &4Wanted & Contracts");
+    public static final String TITLE = TextUtil.color("&4Wanted & Contracts");
     static final int SIZE = 54;
 
     private BountyBoardGui() {}
