@@ -2,6 +2,7 @@ package me.angelique.angelBounty.command;
 
 import me.angelique.angelBounty.AngelBounty;
 import me.angelique.angelBounty.config.PluginConfig;
+import me.angelique.angelBounty.gui.BountyBoardGui;
 import me.angelique.angelBounty.service.WantedService;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
@@ -33,7 +34,7 @@ public final class WantedCommand implements CommandExecutor, TabCompleter {
                 sender.sendMessage("/wanted <player>");
                 return true;
             }
-            sendStatus(sender, player);
+            BountyBoardGui.open(player, plugin);
             return true;
         }
 

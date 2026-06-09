@@ -3,6 +3,8 @@ package me.angelique.angelBounty;
 import me.angelique.angelBounty.command.ContractCommand;
 import me.angelique.angelBounty.command.WantedCommand;
 import me.angelique.angelBounty.config.PluginConfig;
+import me.angelique.angelBounty.gui.BountyBoardGui;
+import me.angelique.angelBounty.gui.BountyBoardListener;
 import me.angelique.angelBounty.listener.PlayerConnectionListener;
 import me.angelique.angelBounty.listener.PlayerDeathListener;
 import me.angelique.angelBounty.service.ContractService;
@@ -46,6 +48,7 @@ public final class AngelBounty extends JavaPlugin {
 
         Bukkit.getPluginManager().registerEvents(new PlayerDeathListener(wantedService, pluginConfig), this);
         Bukkit.getPluginManager().registerEvents(new PlayerConnectionListener(wantedService), this);
+        Bukkit.getPluginManager().registerEvents(new BountyBoardListener(this), this);
 
         PluginCommand wantedCommand = getCommand("wanted");
         if (wantedCommand != null) {
@@ -69,6 +72,7 @@ public final class AngelBounty extends JavaPlugin {
         }
     }
 
+    public WantedService getWantedService() { return wantedService; }
     public ContractService getContractService() { return contractService; }
     public EconomyService getEconomyService() { return economyService; }
 }
